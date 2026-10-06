@@ -1,0 +1,14 @@
+attacker_view,attack,scale,bias,accuracy
+baseline,W_true,true,trained,0.8947
+randomized_public_B,equal_sum_1_1_1,raw,trained,0.0927
+randomized_public_B,equal_sum_1_1_1,raw,random,0.0925
+randomized_public_B,equal_sum_1_1_1,oracle_rescaled_to_W_true_mean_std,trained,0.0535
+randomized_public_B,equal_sum_1_1_1,oracle_rescaled_to_W_true_mean_std,random,0.0803
+randomized_public_B,heuristic_half_1_0.5_0.25,raw,trained,0.1245
+randomized_public_B,heuristic_half_1_0.5_0.25,raw,random,0.125
+randomized_public_B,heuristic_half_1_0.5_0.25,oracle_rescaled_to_W_true_mean_std,trained,0.1076
+randomized_public_B,heuristic_half_1_0.5_0.25,oracle_rescaled_to_W_true_mean_std,random,0.0883
+randomized_public_B,heuristic_binary_4_2_1,raw,trained,0.1255
+randomized_public_B,heuristic_binary_4_2_1,raw,random,0.1256
+randomized_public_B,heuristic_binary_4_2_1,oracle_rescaled_to_W_true_mean_std,trained,0.1076
+randomized_public_B,heuristic_binary_4_2_1,oracle_rescaled_to_W_true_mean_std,random,0.0883

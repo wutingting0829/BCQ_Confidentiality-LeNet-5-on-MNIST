@@ -1,0 +1,7 @@
+layer,n_weights,eta_squared_pattern_to_w_true,monotonic_mean_by_4_2_1_score
+conv1.weight,150,0.6119885444641113,False
+conv2.weight,2400,0.8032615184783936,True
+fc1.weight,30720,0.9275001883506775,True
+fc2.weight,10080,0.9393596053123474,True
+fc3.weight,840,0.9101302623748779,True
+OVERALL,44190,0.7828724980354309,True

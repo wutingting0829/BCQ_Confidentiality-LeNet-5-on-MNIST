@@ -1,0 +1,15 @@
+attack,accuracy
+W_true (baseline),0.8947
+"W_BCQ (full reconstruction, has alpha + z)",0.6949
+"equal_sum_1_1_1 (raw scale, trained bias)",0.6995
+"equal_sum_1_1_1 (raw scale, random bias)",0.7008
+"equal_sum_1_1_1 (rescaled to W_true mean/std, trained bias)",0.7114
+"equal_sum_1_1_1 (rescaled to W_true mean/std, random bias)",0.7433
+"heuristic_half_1_0.5_0.25 (raw scale, trained bias)",0.6727
+"heuristic_half_1_0.5_0.25 (raw scale, random bias)",0.674
+"heuristic_half_1_0.5_0.25 (rescaled to W_true mean/std, trained bias)",0.6799
+"heuristic_half_1_0.5_0.25 (rescaled to W_true mean/std, random bias)",0.7107
+"heuristic_binary_4_2_1 (raw scale, trained bias)",0.6733
+"heuristic_binary_4_2_1 (raw scale, random bias)",0.6733
+"heuristic_binary_4_2_1 (rescaled to W_true mean/std, trained bias)",0.6799
+"heuristic_binary_4_2_1 (rescaled to W_true mean/std, random bias)",0.7107

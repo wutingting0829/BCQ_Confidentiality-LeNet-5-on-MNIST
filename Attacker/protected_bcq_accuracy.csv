@@ -1,0 +1,63 @@
+threat_model,attacker_view,attack,scale,bias,accuracy,interpretation
+baseline,not_applicable,W_true,true,trained,0.8947,Original trained model.
+defender_full_bcq,not_attacker_visible,W_BCQ,alpha_z,trained,0.6949,"Defender reconstruction using protected alpha, z, and B."
+leaky_public_B,public_true_B,equal_sum_1_1_1,raw,trained,0.6995,Control: attacker has the real aligned B_mtx.
+leaky_public_B,public_true_B,equal_sum_1_1_1,raw,random,0.7008,Control: attacker has the real aligned B_mtx.
+leaky_public_B,public_true_B,equal_sum_1_1_1,oracle_rescaled_to_W_true_mean_std,trained,0.7114,Control: attacker has the real aligned B_mtx.
+leaky_public_B,public_true_B,equal_sum_1_1_1,oracle_rescaled_to_W_true_mean_std,random,0.7433,Control: attacker has the real aligned B_mtx.
+leaky_public_B,public_true_B,heuristic_half_1_0.5_0.25,raw,trained,0.6727,Control: attacker has the real aligned B_mtx.
+leaky_public_B,public_true_B,heuristic_half_1_0.5_0.25,raw,random,0.674,Control: attacker has the real aligned B_mtx.
+leaky_public_B,public_true_B,heuristic_half_1_0.5_0.25,oracle_rescaled_to_W_true_mean_std,trained,0.6799,Control: attacker has the real aligned B_mtx.
+leaky_public_B,public_true_B,heuristic_half_1_0.5_0.25,oracle_rescaled_to_W_true_mean_std,random,0.7107,Control: attacker has the real aligned B_mtx.
+leaky_public_B,public_true_B,heuristic_binary_4_2_1,raw,trained,0.6733,Control: attacker has the real aligned B_mtx.
+leaky_public_B,public_true_B,heuristic_binary_4_2_1,raw,random,0.6733,Control: attacker has the real aligned B_mtx.
+leaky_public_B,public_true_B,heuristic_binary_4_2_1,oracle_rescaled_to_W_true_mean_std,trained,0.6799,Control: attacker has the real aligned B_mtx.
+leaky_public_B,public_true_B,heuristic_binary_4_2_1,oracle_rescaled_to_W_true_mean_std,random,0.7107,Control: attacker has the real aligned B_mtx.
+protected_no_B,no_public_B_random_guess,equal_sum_1_1_1,raw,trained,0.1215,Attacker cannot see B_mtx; random sign planes model an uninformed B guess.
+protected_no_B,no_public_B_random_guess,equal_sum_1_1_1,raw,random,0.1207,Attacker cannot see B_mtx; random sign planes model an uninformed B guess.
+protected_no_B,no_public_B_random_guess,equal_sum_1_1_1,oracle_rescaled_to_W_true_mean_std,trained,0.1244,Attacker cannot see B_mtx; random sign planes model an uninformed B guess.
+protected_no_B,no_public_B_random_guess,equal_sum_1_1_1,oracle_rescaled_to_W_true_mean_std,random,0.1191,Attacker cannot see B_mtx; random sign planes model an uninformed B guess.
+protected_no_B,no_public_B_random_guess,heuristic_half_1_0.5_0.25,raw,trained,0.1154,Attacker cannot see B_mtx; random sign planes model an uninformed B guess.
+protected_no_B,no_public_B_random_guess,heuristic_half_1_0.5_0.25,raw,random,0.1143,Attacker cannot see B_mtx; random sign planes model an uninformed B guess.
+protected_no_B,no_public_B_random_guess,heuristic_half_1_0.5_0.25,oracle_rescaled_to_W_true_mean_std,trained,0.1355,Attacker cannot see B_mtx; random sign planes model an uninformed B guess.
+protected_no_B,no_public_B_random_guess,heuristic_half_1_0.5_0.25,oracle_rescaled_to_W_true_mean_std,random,0.1219,Attacker cannot see B_mtx; random sign planes model an uninformed B guess.
+protected_no_B,no_public_B_random_guess,heuristic_binary_4_2_1,raw,trained,0.1153,Attacker cannot see B_mtx; random sign planes model an uninformed B guess.
+protected_no_B,no_public_B_random_guess,heuristic_binary_4_2_1,raw,random,0.1157,Attacker cannot see B_mtx; random sign planes model an uninformed B guess.
+protected_no_B,no_public_B_random_guess,heuristic_binary_4_2_1,oracle_rescaled_to_W_true_mean_std,trained,0.1355,Attacker cannot see B_mtx; random sign planes model an uninformed B guess.
+protected_no_B,no_public_B_random_guess,heuristic_binary_4_2_1,oracle_rescaled_to_W_true_mean_std,random,0.1219,Attacker cannot see B_mtx; random sign planes model an uninformed B guess.
+protected_secret_permutation,secret_weight_permutation_visible,equal_sum_1_1_1,raw,trained,0.1137,Attacker sees B values at wrong weight positions because the position permutation is secret.
+protected_secret_permutation,secret_weight_permutation_visible,equal_sum_1_1_1,raw,random,0.1138,Attacker sees B values at wrong weight positions because the position permutation is secret.
+protected_secret_permutation,secret_weight_permutation_visible,equal_sum_1_1_1,oracle_rescaled_to_W_true_mean_std,trained,0.095,Attacker sees B values at wrong weight positions because the position permutation is secret.
+protected_secret_permutation,secret_weight_permutation_visible,equal_sum_1_1_1,oracle_rescaled_to_W_true_mean_std,random,0.1193,Attacker sees B values at wrong weight positions because the position permutation is secret.
+protected_secret_permutation,secret_weight_permutation_visible,heuristic_half_1_0.5_0.25,raw,trained,0.1261,Attacker sees B values at wrong weight positions because the position permutation is secret.
+protected_secret_permutation,secret_weight_permutation_visible,heuristic_half_1_0.5_0.25,raw,random,0.1273,Attacker sees B values at wrong weight positions because the position permutation is secret.
+protected_secret_permutation,secret_weight_permutation_visible,heuristic_half_1_0.5_0.25,oracle_rescaled_to_W_true_mean_std,trained,0.1402,Attacker sees B values at wrong weight positions because the position permutation is secret.
+protected_secret_permutation,secret_weight_permutation_visible,heuristic_half_1_0.5_0.25,oracle_rescaled_to_W_true_mean_std,random,0.1008,Attacker sees B values at wrong weight positions because the position permutation is secret.
+protected_secret_permutation,secret_weight_permutation_visible,heuristic_binary_4_2_1,raw,trained,0.1251,Attacker sees B values at wrong weight positions because the position permutation is secret.
+protected_secret_permutation,secret_weight_permutation_visible,heuristic_binary_4_2_1,raw,random,0.126,Attacker sees B values at wrong weight positions because the position permutation is secret.
+protected_secret_permutation,secret_weight_permutation_visible,heuristic_binary_4_2_1,oracle_rescaled_to_W_true_mean_std,trained,0.1402,Attacker sees B values at wrong weight positions because the position permutation is secret.
+protected_secret_permutation,secret_weight_permutation_visible,heuristic_binary_4_2_1,oracle_rescaled_to_W_true_mean_std,random,0.1008,Attacker sees B values at wrong weight positions because the position permutation is secret.
+protected_secret_transform,secret_sign_mask_visible,equal_sum_1_1_1,raw,trained,0.1064,Attacker sees sign-masked bit planes; the secret mask is needed to recover true B.
+protected_secret_transform,secret_sign_mask_visible,equal_sum_1_1_1,raw,random,0.1066,Attacker sees sign-masked bit planes; the secret mask is needed to recover true B.
+protected_secret_transform,secret_sign_mask_visible,equal_sum_1_1_1,oracle_rescaled_to_W_true_mean_std,trained,0.0974,Attacker sees sign-masked bit planes; the secret mask is needed to recover true B.
+protected_secret_transform,secret_sign_mask_visible,equal_sum_1_1_1,oracle_rescaled_to_W_true_mean_std,random,0.1028,Attacker sees sign-masked bit planes; the secret mask is needed to recover true B.
+protected_secret_transform,secret_sign_mask_visible,heuristic_half_1_0.5_0.25,raw,trained,0.1085,Attacker sees sign-masked bit planes; the secret mask is needed to recover true B.
+protected_secret_transform,secret_sign_mask_visible,heuristic_half_1_0.5_0.25,raw,random,0.1077,Attacker sees sign-masked bit planes; the secret mask is needed to recover true B.
+protected_secret_transform,secret_sign_mask_visible,heuristic_half_1_0.5_0.25,oracle_rescaled_to_W_true_mean_std,trained,0.0848,Attacker sees sign-masked bit planes; the secret mask is needed to recover true B.
+protected_secret_transform,secret_sign_mask_visible,heuristic_half_1_0.5_0.25,oracle_rescaled_to_W_true_mean_std,random,0.1018,Attacker sees sign-masked bit planes; the secret mask is needed to recover true B.
+protected_secret_transform,secret_sign_mask_visible,heuristic_binary_4_2_1,raw,trained,0.1081,Attacker sees sign-masked bit planes; the secret mask is needed to recover true B.
+protected_secret_transform,secret_sign_mask_visible,heuristic_binary_4_2_1,raw,random,0.1079,Attacker sees sign-masked bit planes; the secret mask is needed to recover true B.
+protected_secret_transform,secret_sign_mask_visible,heuristic_binary_4_2_1,oracle_rescaled_to_W_true_mean_std,trained,0.0848,Attacker sees sign-masked bit planes; the secret mask is needed to recover true B.
+protected_secret_transform,secret_sign_mask_visible,heuristic_binary_4_2_1,oracle_rescaled_to_W_true_mean_std,random,0.1018,Attacker sees sign-masked bit planes; the secret mask is needed to recover true B.
+protected_hidden_bit_order,secret_bit_order_reversed_visible,equal_sum_1_1_1,raw,trained,0.6995,Attacker sees B but uses the wrong bit-plane order.
+protected_hidden_bit_order,secret_bit_order_reversed_visible,equal_sum_1_1_1,raw,random,0.7008,Attacker sees B but uses the wrong bit-plane order.
+protected_hidden_bit_order,secret_bit_order_reversed_visible,equal_sum_1_1_1,oracle_rescaled_to_W_true_mean_std,trained,0.7114,Attacker sees B but uses the wrong bit-plane order.
+protected_hidden_bit_order,secret_bit_order_reversed_visible,equal_sum_1_1_1,oracle_rescaled_to_W_true_mean_std,random,0.7433,Attacker sees B but uses the wrong bit-plane order.
+protected_hidden_bit_order,secret_bit_order_reversed_visible,heuristic_half_1_0.5_0.25,raw,trained,0.3004,Attacker sees B but uses the wrong bit-plane order.
+protected_hidden_bit_order,secret_bit_order_reversed_visible,heuristic_half_1_0.5_0.25,raw,random,0.3022,Attacker sees B but uses the wrong bit-plane order.
+protected_hidden_bit_order,secret_bit_order_reversed_visible,heuristic_half_1_0.5_0.25,oracle_rescaled_to_W_true_mean_std,trained,0.2555,Attacker sees B but uses the wrong bit-plane order.
+protected_hidden_bit_order,secret_bit_order_reversed_visible,heuristic_half_1_0.5_0.25,oracle_rescaled_to_W_true_mean_std,random,0.2447,Attacker sees B but uses the wrong bit-plane order.
+protected_hidden_bit_order,secret_bit_order_reversed_visible,heuristic_binary_4_2_1,raw,trained,0.2994,Attacker sees B but uses the wrong bit-plane order.
+protected_hidden_bit_order,secret_bit_order_reversed_visible,heuristic_binary_4_2_1,raw,random,0.3006,Attacker sees B but uses the wrong bit-plane order.
+protected_hidden_bit_order,secret_bit_order_reversed_visible,heuristic_binary_4_2_1,oracle_rescaled_to_W_true_mean_std,trained,0.2555,Attacker sees B but uses the wrong bit-plane order.
+protected_hidden_bit_order,secret_bit_order_reversed_visible,heuristic_binary_4_2_1,oracle_rescaled_to_W_true_mean_std,random,0.2447,Attacker sees B but uses the wrong bit-plane order.
